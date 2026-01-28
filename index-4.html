@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform Your Business with AI-Powered Workflow Automation - Top 10 Most Demanded Solutions">
+    <meta name="keywords" content="workflow automation, AI, business automation, n8n, machine learning">
+    <meta name="author" content="Mohamed Salah - Full-Stack Developer">
+    <title>⚡ AI Workflow Automation Hub - Transform Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style> 
+
+/* ========================================
+   AI Workflow Automation Hub - Styles
+   Modern Glassmorphism Design with Advanced Animations
+   ======================================== */
+
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --primary-color: #6366f1;
+    --secondary-color: #ec4899;
+    --accent-color: #8b5cf6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    
+    /* Background */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #13131a;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    
+    /* Glass Effect */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-shadow: rgba(0, 0, 0, 0.3);
+    
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* === Animated Background === */
+.gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.6) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.6) 0%, transparent 70%);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: 5s;
+}
+
+.orb-3 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50px, -50px) scale(1.1); }
+    66% { transform: translate(-50px, 50px) scale(0.9); }
+}
+
+/* === Particles === */
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: particleFloat 15s linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* === Container === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* === Glass Card Effect === */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+    transition: all var(--transition-normal);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* === Navigation === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+    transition: all var(--transition-normal);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform var(--transition-normal);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 3px;
+    transition: all var(--transition-normal);
+}
+
+/* === Hero Section === */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9rem;
+    animation: slideDown 0.6s ease-out;
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.02em;
+    animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #8b5cf6 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.hero-description {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.8;
+    animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 16px;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-primary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--glass-border);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+    transition: transform var(--transition-normal);
+}
+
+.btn:hover .btn-icon,
+.btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* === Stats Section === */
+.stats-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.stat-card {
+    padding: var(--spacing-md);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.stat-suffix {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+/* === Workflows Section === */
+.workflows-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.workflows-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.workflow-card {
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.workflow-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.workflow-card:hover::after {
+    opacity: 1;
+}
+
+.workflow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.workflow-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-normal);
+}
+
+.workflow-card:hover .workflow-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.workflow-badge {
+    padding: 0.4rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.workflow-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.workflow-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.workflow-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.workflow-stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.workflow-btn {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.workflow-btn:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(236, 72, 153, 0.3));
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* === Modal Styles === */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    overflow-y: auto;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    color: var(--text-primary);
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-list li {
+    padding: 0.8rem 0 0.8rem 2rem;
+    position: relative;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.modal-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+}
+
+/* Workflow Card Enhanced Animations */
+.workflow-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.workflow-title {
+    background: linear-gradient(90deg, 
+        var(--text-primary) 0%, 
+        var(--primary-color) 50%, 
+        var(--secondary-color) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 3s linear infinite;
+}
+
+@keyframes shimmerText {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.fade-in-down {
+    opacity: 0;
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right var(--transition-normal);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .workflows-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+    
+    .stat-card {
+        padding: var(--spacing-sm);
+    }
+    
+    .modal-content {
+        padding: var(--spacing-md);
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-suffix {
+        font-size: 1.5rem;
+    }
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+
+    </style> 
+
+
+
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div id="particles-container"></div>
+    
+    <!-- Animated Gradient Background -->
+    <div class="gradient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span>AI Workflow Hub</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#workflows" class="nav-link">Workflows</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="https://wa.me/201113903070?text=I%27m%20interested%20in%20AI%20Workflow%20Automation" target="_blank" class="nav-cta">Contact</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>Powered by Advanced AI & Automation</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Transform Your Business with <br>
+                    <span class="gradient-text">AI-Powered Workflows</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Save 80% of your time with intelligent automation. We build custom AI workflows that work 24/7, 
+                    eliminate human errors, and scale your business without hiring more staff.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#workflows" class="btn btn-primary">
+                        <span>Explore Workflows</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="https://wa.me/201113903070?text=I%27m%20interested%20in%20AI%20Workflow%20Automation" target="_blank" class="btn btn-secondary">
+                        <span>Start Saving Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-card fade-in-up">
+                    <div class="stat-icon">📊</div>
+                    <div>
+                        <span class="stat-number" data-target="500">500</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <div class="stat-label">Projects Automated</div>
+                </div>
+                <div class="stat-card glass-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="stat-icon">✅</div>
+                    <div>
+                        <span class="stat-number" data-target="95">95</span>
+                        <span class="stat-suffix">%</span>
+                    </div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card glass-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="stat-icon">⚡</div>
+                    <div>
+                        <span class="stat-number" data-target="80">80</span>
+                        <span class="stat-suffix">%</span>
+                    </div>
+                    <div class="stat-label">Time Saved</div>
+                </div>
+                <div class="stat-card glass-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="stat-icon">🌍</div>
+                    <div>
+                        <span class="stat-number" data-target="50">50</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflows Section -->
+    <section class="workflows-section" id="workflows">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">
+                    <span class="gradient-text">10 Powerful Workflows</span>
+                </h2>
+                <p class="section-description">
+                    Discover the most demanded automation solutions transforming businesses worldwide
+                </p>
+            </div>
+
+            <div class="workflows-grid">
+                <!-- Workflow 1: Lead Qualification -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="1">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            🎯
+                        </div>
+                        <div class="workflow-badge">AI-Powered</div>
+                    </div>
+                    <h3 class="workflow-title">Lead Qualification & Distribution</h3>
+                    <p class="workflow-description">
+                        Intelligent lead scoring and automated routing to sales teams with 85% faster response time
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">45%</span>
+                            <span class="stat-label">Higher Conversion</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">5 min</span>
+                            <span class="stat-label">Response Time</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(1)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 2: Document Processing -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="2" style="animation-delay: 0.1s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            📄
+                        </div>
+                        <div class="workflow-badge">OCR + NLP</div>
+                    </div>
+                    <h3 class="workflow-title">AI Document Processing</h3>
+                    <p class="workflow-description">
+                        Extract and analyze documents with 99%+ accuracy using advanced OCR and NLP technology
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">90%</span>
+                            <span class="stat-label">Faster Processing</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">50+</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(2)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 3: Decision Logic -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="3" style="animation-delay: 0.2s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            🧠
+                        </div>
+                        <div class="workflow-badge">Smart Routing</div>
+                    </div>
+                    <h3 class="workflow-title">Decision Logic & Routing</h3>
+                    <p class="workflow-description">
+                        Complex conditional routing with AI pattern matching and intelligent priority assignment
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">95%</span>
+                            <span class="stat-label">Fewer Errors</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">60%</span>
+                            <span class="stat-label">Faster Response</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(3)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 4: Notifications -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="4" style="animation-delay: 0.3s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            🔔
+                        </div>
+                        <div class="workflow-badge">Multi-Channel</div>
+                    </div>
+                    <h3 class="workflow-title">Real-time Notifications</h3>
+                    <p class="workflow-description">
+                        Instant multi-channel notifications via Email, SMS, Slack, and WhatsApp with smart delivery
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">99.9%</span>
+                            <span class="stat-label">Delivery Rate</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">&lt;1s</span>
+                            <span class="stat-label">Response Time</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(4)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 5: Data Sync -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="5" style="animation-delay: 0.4s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            🔄
+                        </div>
+                        <div class="workflow-badge">Real-time</div>
+                    </div>
+                    <h3 class="workflow-title">Data Synchronization</h3>
+                    <p class="workflow-description">
+                        Bi-directional data sync between CRM, ERP, databases, and cloud apps in real-time
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">Real-time</span>
+                            <span class="stat-label">Updates</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(5)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 6: Customer Support -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="6" style="animation-delay: 0.5s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                            💬
+                        </div>
+                        <div class="workflow-badge">AI Chatbot</div>
+                    </div>
+                    <h3 class="workflow-title">AI Customer Support</h3>
+                    <p class="workflow-description">
+                        Intelligent chatbot with natural language understanding, multi-language support, and human handoff
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">85%</span>
+                            <span class="stat-label">Auto-Resolution</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">24/7</span>
+                            <span class="stat-label">Availability</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(6)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 7: Social Media -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="7" style="animation-delay: 0.6s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                            📱
+                        </div>
+                        <div class="workflow-badge">Automation</div>
+                    </div>
+                    <h3 class="workflow-title">Social Media Management</h3>
+                    <p class="workflow-description">
+                        Automated posting, engagement tracking, and sentiment analysis across all platforms
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">10x</span>
+                            <span class="stat-label">More Posts</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">75%</span>
+                            <span class="stat-label">Time Saved</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(7)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 8: Inventory -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="8" style="animation-delay: 0.7s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                            📦
+                        </div>
+                        <div class="workflow-badge">Predictive</div>
+                    </div>
+                    <h3 class="workflow-title">Smart Inventory Management</h3>
+                    <p class="workflow-description">
+                        AI-powered stock predictions, automatic reordering, and real-time inventory tracking
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">40%</span>
+                            <span class="stat-label">Cost Reduction</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">Zero</span>
+                            <span class="stat-label">Stockouts</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(8)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 9: Financial -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="9" style="animation-delay: 0.8s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                            💳
+                        </div>
+                        <div class="workflow-badge">Smart Finance</div>
+                    </div>
+                    <h3 class="workflow-title">Financial Reconciliation</h3>
+                    <p class="workflow-description">
+                        Automated matching of invoices and payments with ML-powered anomaly detection
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">90%</span>
+                            <span class="stat-label">Faster</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">99.9%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(9)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+
+                <!-- Workflow 10: HR Onboarding -->
+                <div class="workflow-card glass-card fade-in-up" data-workflow="10" style="animation-delay: 0.9s;">
+                    <div class="workflow-header">
+                        <div class="workflow-icon" style="background: linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%);">
+                            👥
+                        </div>
+                        <div class="workflow-badge">HR Automation</div>
+                    </div>
+                    <h3 class="workflow-title">HR Onboarding Automation</h3>
+                    <p class="workflow-description">
+                        Complete employee onboarding from offer acceptance to first day, all automated
+                    </p>
+                    <div class="workflow-stats">
+                        <div class="workflow-stat">
+                            <span class="stat-value">70%</span>
+                            <span class="stat-label">Faster</span>
+                        </div>
+                        <div class="workflow-stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Compliance</span>
+                        </div>
+                    </div>
+                    <button class="workflow-btn" onclick="openWorkflowModal(10)">
+                        <span>Show More</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+         <script>
+
+// ========================================
+// AI Workflow Automation Hub - JavaScript
+// Advanced Interactions & Animations
+// ========================================
+
+// === Initialize on DOM Load ===
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 Initializing AI Workflow Hub...');
+    initParticles();
+    initScrollAnimations();
+    initStatCounters();
+    initNavbar();
+    initMobileMenu();
+    initSmoothScroll();
+    initWorkflowModals();
+    initWorkflowAnimations();
+    console.log('✅ All systems initialized!');
+});
+
+// === Dynamic Hero Content ===
+function initDynamicHero() {
+    const typewriterPhrases = [
+        "Intelligent Automation",
+        "AI-Powered Workflows",
+        "Smart Business Solutions",
+        "Automated Excellence",
+        "Digital Transformation",
+        "Workflow Optimization"
+    ];
+    
+    let currentIndex = 0;
+    const typewriterElement = document.createElement('span');
+    typewriterElement.className = 'typewriter-text';
+    
+    function typeWriter(text, callback) {
+        let i = 0;
+        typewriterElement.textContent = '';
+        
+        const typing = setInterval(() => {
+            if (i < text.length) {
+                typewriterElement.textContent += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(typing);
+                setTimeout(callback, 2000);
+            }
+        }, 100);
+    }
+    
+    function eraseText(callback) {
+        let text = typewriterElement.textContent;
+        
+        const erasing = setInterval(() => {
+            if (text.length > 0) {
+                text = text.slice(0, -1);
+                typewriterElement.textContent = text;
+            } else {
+                clearInterval(erasing);
+                callback();
+            }
+        }, 50);
+    }
+    
+    function cycle() {
+        typeWriter(typewriterPhrases[currentIndex], () => {
+            eraseText(() => {
+                currentIndex = (currentIndex + 1) % typewriterPhrases.length;
+                cycle();
+            });
+        });
+    }
+}
+
+// === Workflow Card 3D Effect ===
+function initWorkflowAnimations() {
+    const cards = document.querySelectorAll('.workflow-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
+// === Particle System ===
+function initParticles() {
+    const container = document.getElementById('particles-container');
+    const particleCount = window.innerWidth > 768 ? 50 : 20;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random properties
+        const size = Math.random() * 3 + 1;
+        const startX = Math.random() * window.innerWidth;
+        const duration = Math.random() * 10 + 10;
+        const delay = Math.random() * 5;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${startX}px`;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.animationDelay = `${delay}s`;
+        
+        // Random color
+        const colors = ['#6366f1', '#ec4899', '#8b5cf6', '#10b981'];
+        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+        
+        container.appendChild(particle);
+    }
+}
+
+// === Scroll Animations ===
+function initScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    document.querySelectorAll('.fade-in-up, .fade-in-down').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// === Stat Counters - FIXED VERSION ===
+function initStatCounters() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
+    
+    // Animate immediately on page load
+    setTimeout(() => {
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.dataset.target);
+            animateCounter(stat, target);
+        });
+    }, 500);
+    
+    // Also animate when scrolled into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.dataset.target);
+                    animateCounter(stat, target);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) observer.observe(statsSection);
+}
+
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50;
+    const duration = 2000;
+    const stepTime = duration / 50;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, stepTime);
+}
+
+// === Navbar Scroll Effect ===
+function initNavbar() {
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Update active link
+        const sections = document.querySelectorAll('section[id]');
+        const scrollY = window.scrollY;
+        
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 100;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+}
+
+// === Mobile Menu ===
+function initMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    
+    hamburger?.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        
+        // Animate hamburger
+        const spans = hamburger.querySelectorAll('span');
+        if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+        } else {
+            spans.forEach(span => {
+                span.style.transform = '';
+                span.style.opacity = '1';
+            });
+        }
+    });
+    
+    // Close menu on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const spans = hamburger.querySelectorAll('span');
+            spans.forEach(span => {
+                span.style.transform = '';
+                span.style.opacity = '1';
+            });
+        });
+    });
+}
+
+// === Smooth Scroll ===
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// === Workflow Modals - COMPLETE DATA ===
+const workflowsData = {
+    1: {
+        title: "Lead Qualification & Distribution",
+        icon: "🎯",
+        gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        description: "Imagine never losing a potential customer again. Your leads are automatically analyzed, scored, and delivered to the perfect salesperson - all in under 5 minutes. While your competitors are still manually sorting through spreadsheets, you're already closing deals.",
+        marketingPitch: "⚡ Stop Watching Money Slip Away! Every minute a lead waits is money lost. Your competitors respond in hours - you'll respond in minutes. Transform your sales team into a high-performance machine that never sleeps, never forgets, and never lets a hot lead go cold.",
+        features: [
+            "Lightning-Fast Response: Your team contacts leads within 5 minutes, not 4 hours",
+            "Smart Matching: Every lead goes to the salesperson most likely to close the deal",
+            "Zero Manual Work: No more spreadsheets, no more guessing, no more lost opportunities",
+            "Fair Distribution: Your team gets balanced workloads based on performance and capacity",
+            "Instant Notifications: Get alerts via Slack, Email, or SMS the second a hot lead arrives",
+            "Rich Data: Every lead comes with company info, social profiles, and buying signals"
+        ],
+        realWorldImpact: [
+            "A software company increased sales by 45% in 90 days - same team, same budget",
+            "Real estate agency closed 3 extra deals per month worth $180,000 in commissions",
+            "Insurance broker reduced response time from 6 hours to 3 minutes - conversion rate doubled",
+            "Marketing agency eliminated lead assignment conflicts that cost them $50k annually"
+        ],
+        benefits: [
+            "45% higher conversion rates - more deals closed from the same number of leads",
+            "85% faster response time - be first to contact while others are still checking email",
+            "15 hours saved weekly - your sales team focuses on selling, not admin work",
+            "Zero leads lost - every single inquiry gets immediate attention and follow-up",
+            "Complete transparency - track every lead from entry to close with full analytics"
+        ],
+        pricing: {
+            egypt: "EGP 45,000 - 65,000",
+            gulf: "$12,000 - $17,000"
+        }
+    },
+    2: {
+        title: "AI Document Processing & Analysis",
+        icon: "📄",
+        gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+        description: "Your team spends hours typing data from documents into systems. Imagine if that work happened instantly, perfectly, 24/7. Our AI reads invoices, contracts, forms - anything with text - and extracts every detail with 99.9% accuracy. What took a day now takes 30 seconds.",
+        marketingPitch: "💸 Stop Burning Money on Manual Data Entry! Your employees are too valuable to spend their days typing. One person doing data entry costs you $30,000+ yearly. Our AI processes 1,000 documents in the time it takes to drink your coffee - with zero errors and zero fatigue.",
+        features: [
+            "Instant Processing: 1,000 documents processed in minutes, not days or weeks",
+            "Perfect Accuracy: 99.9% accuracy means no costly mistakes or rework",
+            "Smart Understanding: Recognizes invoices, contracts, receipts, forms automatically",
+            "Any Language: Works with 50+ languages including handwritten text",
+            "Automatic Filing: Documents sorted and stored exactly where they belong",
+            "Seamless Integration: Feeds directly into your accounting, CRM, or ERP systems"
+        ],
+        realWorldImpact: [
+            "Accounting firm eliminated 3 full-time data entry positions - saving $120,000 annually",
+            "Law office processes 500 contracts monthly instead of 50 - 10x capacity increase",
+            "Healthcare clinic digitized 10 years of patient records in just 2 weeks",
+            "Government agency reduced application processing time from 30 days to 4 hours"
+        ],
+        benefits: [
+            "90% faster processing - finish in hours what used to take weeks",
+            "95% cost reduction - stop paying humans to do robot work",
+            "Zero errors - eliminate the typos, missed fields, and costly mistakes",
+            "24/7 operation - documents processed any time, day or night",
+            "Scale infinitely - handle 10x more documents without hiring anyone"
+        ],
+        pricing: {
+            egypt: "EGP 55,000 - 75,000",
+            gulf: "$14,500 - $19,500"
+        }
+    },
+    3: {
+        title: "Decision Logic & Smart Routing",
+        icon: "🧠",
+        gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+        description: "Stop relying on humans to make routing decisions that should be instant and perfect. Our AI analyzes every request, applies complex business rules in milliseconds, and routes it to exactly the right person or system. What used to cause confusion and delays now happens automatically and flawlessly.",
+        marketingPitch: "🎯 End the Chaos of Misdirected Work! Every misdirected ticket, misrouted order, or wrong assignment costs you time, money, and customer satisfaction. While others play email ping-pong, your system makes perfect decisions instantly. Your customers get help faster, your team works smarter, and your business runs like clockwork.",
+        features: [
+            "Instant Decisions: Complex routing that takes humans minutes happens in milliseconds",
+            "Zero Mistakes: AI never forgets a rule, never plays favorites, never makes errors",
+            "Smart Learning: Gets better over time by learning from outcomes",
+            "Perfect Balance: Distributes work evenly based on capacity and skill",
+            "Automatic Escalation: Critical issues get immediate priority attention",
+            "Complete Visibility: See exactly why every decision was made"
+        ],
+        realWorldImpact: [
+            "IT helpdesk cut ticket resolution time by 60% - users get help 3x faster",
+            "Customer service team achieved 94% first-contact resolution - up from 52%",
+            "Operations team eliminated 85% of routing errors that caused delays",
+            "Financial services company processes loan applications 5x faster"
+        ],
+        benefits: [
+            "95% fewer routing errors - work goes to the right person first time, every time",
+            "60% faster response - eliminate the back-and-forth of wrong assignments",
+            "Zero favoritism - fair, logical distribution based on data, not politics",
+            "Automatic priority - urgent work gets immediate attention without human judgment",
+            "Real-time insights - understand your workflow patterns and optimize continuously"
+        ],
+        pricing: {
+            egypt: "EGP 50,000 - 70,000",
+            gulf: "$13,000 - $18,500"
+        }
+    },
+    4: {
+        title: "Real-time Notifications System",
+        icon: "🔔",
+        gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+        description: "Critical information shouldn't wait in email inboxes. When something important happens, everyone who needs to know finds out instantly - through their preferred channel, at the right time, with the right priority. SMS for emergencies, Email for details, Slack for team updates. All automatic, all instant, all reliable.",
+        marketingPitch: "⚡ Never Miss a Critical Moment Again! That emergency that took 4 hours to communicate? Now it takes 4 seconds. That important update buried in 200 emails? Now it's an instant SMS. Stop losing money because information moved too slowly. In business, seconds matter - and we deliver in milliseconds.",
+        features: [
+            "Multi-Channel: Email, SMS, Slack, Teams, WhatsApp - use what your people actually check",
+            "Smart Timing: Respects time zones, work hours, and personal preferences automatically",
+            "Priority Routing: Emergencies via SMS, updates via email, FYIs via Slack",
+            "Perfect Delivery: 99.9% delivery success with automatic retries",
+            "Rich Content: Send links, images, data, actions - not just text",
+            "Track Everything: Know exactly who received, read, and acted on each message"
+        ],
+        realWorldImpact: [
+            "E-commerce store reduced cart abandonment by 35% with instant order updates",
+            "Bank stopped $2M in fraud by alerting customers within seconds of suspicious activity",
+            "Hospital reduced patient no-shows by 60% with timely appointment reminders",
+            "Tech company decreased incident response time from 30 minutes to 30 seconds"
+        ],
+        benefits: [
+            "99.9% delivery rate - your critical messages always get through",
+            "Sub-second speed - information reaches people faster than email can load",
+            "Zero missed alerts - automatic fallback if first channel fails",
+            "Perfect timing - messages arrive when people can actually act on them",
+            "Complete tracking - prove compliance, measure engagement, optimize delivery"
+        ],
+        pricing: {
+            egypt: "EGP 40,000 - 55,000",
+            gulf: "$10,500 - $14,500"
+        }
+    },
+    5: {
+        title: "Bi-Directional Data Synchronization",
+        icon: "🔄",
+        gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+        description: "Your data lives in dozens of places - CRM, accounting, inventory, e-commerce, spreadsheets. Every day, someone manually copies data between them, introducing errors and wasting hours. What if all your systems stayed perfectly in sync, automatically, in real-time? That's what we build.",
+        marketingPitch: "🔥 Stop Fighting with Duplicate Data Entry! Your team wastes 20+ hours weekly copying data between systems. One typo cascades into inventory errors, billing mistakes, and angry customers. While you're reconciling spreadsheets, competitors with automated sync are already serving their next customer.",
+        features: [
+            "Real-time Sync: Changes in one system appear in all others within seconds",
+            "Bi-directional: Data flows both ways - no more one-way exports",
+            "Conflict Resolution: Smart handling when the same data changes in multiple places",
+            "Field Mapping: Automatically translates data between different system formats",
+            "Error Recovery: Never loses data even if a system temporarily goes offline",
+            "Audit Trail: Complete history of every sync operation for compliance"
+        ],
+        realWorldImpact: [
+            "E-commerce business eliminated overselling by syncing inventory across 5 platforms",
+            "Service company cut billing errors by 95% with CRM-to-accounting sync",
+            "Manufacturer reduced order processing time from 4 hours to 5 minutes",
+            "Distributor eliminated $250k in annual reconciliation costs"
+        ],
+        benefits: [
+            "100% data accuracy - one source of truth across all systems",
+            "Zero manual entry - stop paying people to copy and paste",
+            "Real-time updates - everyone sees the same current data always",
+            "Scale freely - add new systems without adding sync work",
+            "Sleep better - no more weekend fire drills fixing data mismatches"
+        ],
+        pricing: {
+            egypt: "EGP 60,000 - 85,000",
+            gulf: "$16,000 - $22,000"
+        }
+    },
+    6: {
+        title: "AI-Powered Customer Support",
+        icon: "💬",
+        gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+        description: "Your customers deserve instant answers, 24/7, in their language. Our AI chatbot handles 85% of inquiries automatically with human-like understanding, only escalating to your team when truly needed. Your team focuses on complex issues while the AI handles the routine stuff perfectly.",
+        marketingPitch: "💪 Why Pay Humans to Answer the Same 10 Questions All Day? Your support team is talented - why waste them on 'What are your hours?' and 'How do I reset my password?' Let AI handle the repetitive stuff while your team tackles the interesting challenges. Your customers get instant help, your team stays motivated, and your costs plummet.",
+        features: [
+            "Natural Understanding: Comprehends intent, handles typos, understands context",
+            "50+ Languages: Automatically detects and responds in customer's language",
+            "Smart Escalation: Knows when to hand off to a human seamlessly",
+            "Learning System: Gets smarter from every conversation",
+            "Omnichannel: Works on website, mobile app, Facebook, WhatsApp, SMS",
+            "Rich Responses: Can search knowledge base, check orders, process requests"
+        ],
+        realWorldImpact: [
+            "SaaS company reduced support costs by $180k annually while improving satisfaction scores",
+            "Retailer handles Black Friday traffic with zero additional support staff",
+            "Bank resolved 92% of password resets automatically - used to be 100% human-handled",
+            "Healthcare provider answers 10,000 appointment questions monthly with no staff increase"
+        ],
+        benefits: [
+            "85% automatic resolution - handle vastly more inquiries with same team size",
+            "24/7 availability - customers get help at 3 AM on Christmas",
+            "Sub-second response - no more 'please hold for 15 minutes'",
+            "Zero turnover - AI doesn't quit, call in sick, or need training",
+            "Complete analytics - understand common issues and optimize proactively"
+        ],
+        pricing: {
+            egypt: "EGP 70,000 - 95,000",
+            gulf: "$18,000 - $25,000"
+        }
+    },
+    7: {
+        title: "Social Media Management & Automation",
+        icon: "📱",
+        gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+        description: "Social media demands constant attention - posting, responding, analyzing, reporting. What if your social presence ran itself? Schedule content, auto-respond to messages, track mentions, analyze sentiment, and generate reports - all automated. Your brand stays active 24/7 while you focus on strategy.",
+        marketingPitch: "📢 Your Competitors Post 10x More Than You - Here's How to Catch Up! They're not superhuman, they're automated. While you manually craft one post, automated businesses publish 10 across all platforms, respond to every mention instantly, and track every metric. Stop losing followers to competitors who never sleep.",
+        features: [
+            "Smart Scheduling: Post optimal times for each platform automatically",
+            "Auto-Response: Instant replies to common messages and comments",
+            "Sentiment Analysis: Know how people really feel about your brand",
+            "Trend Detection: Identifies viral opportunities in real-time",
+            "Competitor Tracking: Monitor what competitors are doing",
+            "Unified Dashboard: Manage all platforms from one place"
+        ],
+        realWorldImpact: [
+            "Restaurant chain increased engagement 400% while reducing social media team by 60%",
+            "E-commerce brand went from 1 post daily to 12 without hiring anyone",
+            "Tech startup identified and responded to 250 brand mentions daily automatically",
+            "Agency manages 50 client accounts with a team that used to handle 10"
+        ],
+        benefits: [
+            "10x more content - maintain active presence across all platforms",
+            "75% time saved - stop spending 20 hours weekly on social media",
+            "Zero missed mentions - respond to every customer within minutes",
+            "Perfect timing - posts automatically publish when your audience is most active",
+            "Data-driven decisions - understand what content performs best and why"
+        ],
+        pricing: {
+            egypt: "EGP 48,000 - 68,000",
+            gulf: "$12,500 - $17,500"
+        }
+    },
+    8: {
+        title: "Smart Inventory Management",
+        icon: "📦",
+        gradient: "linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)",
+        description: "Running out of stock loses sales. Overstocking ties up cash. Our AI predicts exactly what you'll need, when you'll need it, and automatically orders it. Track inventory across all locations in real-time. Get alerts before problems happen. Never lose a sale to 'out of stock' again.",
+        marketingPitch: "💰 Stop Guessing What to Order! That product that's been sitting unsold for 6 months? That's $10,000 of your money gathering dust. That hot seller you ran out of? That's $50,000 in lost sales. AI doesn't guess - it predicts with 95% accuracy. Your cash stops sitting on shelves and starts being sales.",
+        features: [
+            "Demand Forecasting: ML predicts exactly what you'll sell next week/month/quarter",
+            "Automatic Reordering: Orders placed to suppliers automatically at optimal times",
+            "Multi-Location: Track inventory across warehouses, stores, trucks in real-time",
+            "Low Stock Alerts: Get warned before you run out, not after",
+            "Supplier Management: Compare prices, lead times, reliability automatically",
+            "Waste Prevention: Identifies slow-moving items before they become losses"
+        ],
+        realWorldImpact: [
+            "Retailer reduced inventory costs 40% while eliminating stockouts completely",
+            "Restaurant chain cut food waste by $300k annually with better predictions",
+            "Distributor improved cash flow by $2M by optimizing stock levels",
+            "Manufacturer reduced emergency orders (expensive) by 90%"
+        ],
+        benefits: [
+            "40% lower inventory costs - carry less stock without risking stockouts",
+            "Zero stockouts - never lose a sale because you ran out",
+            "90% less waste - stop throwing away expired or obsolete inventory",
+            "Improved cash flow - your money isn't sitting in a warehouse",
+            "Supplier optimization - automatically get best prices and terms"
+        ],
+        pricing: {
+            egypt: "EGP 65,000 - 88,000",
+            gulf: "$17,000 - $23,000"
+        }
+    },
+    9: {
+        title: "Financial Reconciliation Automation",
+        icon: "💳",
+        gradient: "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)",
+        description: "Your accounting team spends days matching invoices to payments, hunting for discrepancies, and reconciling accounts. What takes them a week takes our AI 30 minutes. Perfect matching, instant discrepancy detection, automatic reconciliation reports. Your books are always current, and your team tackles strategic work.",
+        marketingPitch: "⚠️ Financial Reconciliation is Killing Your Month-End Close! While you're working weekends matching 10,000 transactions, competitors with automation finish on day one. That missing $500 you spent 8 hours finding? AI finds it in 0.3 seconds. Stop paying accountants to do robot work.",
+        features: [
+            "Automatic Matching: Intelligently pairs invoices to payments across systems",
+            "Multi-Currency: Handles foreign exchange automatically",
+            "Anomaly Detection: ML identifies unusual transactions and potential fraud",
+            "Bank Integration: Pulls transactions from all accounts automatically",
+            "Exception Handling: Routes problems to appropriate team member",
+            "Audit Trail: Complete documentation for compliance"
+        ],
+        realWorldImpact: [
+            "Accounting firm processes 10x more clients with same team size",
+            "Retail chain cut reconciliation time from 5 days to 4 hours monthly",
+            "Discovered $250k in vendor overbilling automatically",
+            "Eliminated 95% of payment application errors"
+        ],
+        benefits: [
+            "90% faster reconciliation - days of work done in 30 minutes",
+            "99.9% accuracy - eliminate human matching errors",
+            "Immediate fraud detection - catch problems before they become expensive",
+            "Real-time books - know your financial position any time, not just month-end",
+            "Team satisfaction - your accountants do interesting analysis, not data matching"
+        ],
+        pricing: {
+            egypt: "EGP 65,000 - 90,000",
+            gulf: "$17,000 - $23,500"
+        }
+    },
+    10: {
+        title: "HR Onboarding Automation",
+        icon: "👥",
+        gradient: "linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%)",
+        description: "New employee onboarding is a nightmare of paperwork, IT tickets, training assignments, and follow-ups. Most companies take 3 weeks to get someone fully set up. Our automation does it in 3 days - documents collected, accounts created, equipment ordered, training assigned, all automatically.",
+        marketingPitch: "⏱️ Your New Hires Waste Their First 2 Weeks Waiting for Login Access! They're excited to start. You're paying them. But they can't work because IT hasn't set up their accounts, HR hasn't processed their documents, and training hasn't been assigned. Automated onboarding gets them productive on day one.",
+        features: [
+            "Document Collection: New hires submit and e-sign all paperwork digitally",
+            "Account Provisioning: Email, Slack, tools all set up automatically",
+            "Equipment Ordering: IT tickets created, laptops ordered, shipped",
+            "Training Assignment: Courses automatically assigned based on role",
+            "Compliance Tracking: I-9, tax forms, policies all tracked automatically",
+            "Manager Notifications: Managers see progress, get alerts if something stalls"
+        ],
+        realWorldImpact: [
+            "Tech company onboards 50 people monthly (used to max out at 15)",
+            "Retail business reduced onboarding time from 3 weeks to 3 days",
+            "Financial services achieved 100% compliance (was 73% before automation)",
+            "Startup saved $45k annually in HR time on onboarding tasks"
+        ],
+        benefits: [
+            "70% faster onboarding - new hires productive immediately, not eventually",
+            "50% increase in satisfaction - new employees feel welcomed and prepared",
+            "100% compliance - never miss a required form or document",
+            "Zero setup failures - accounts, equipment, training all completed correctly",
+            "HR freed up - focus on culture and development, not paperwork"
+        ],
+        pricing: {
+            egypt: "EGP 52,000 - 72,000",
+            gulf: "$13,500 - $18,500"
+        }
+    }
+};
+
+function initWorkflowModals() {
+    const modalContainer = document.getElementById('modal-container');
+    
+    // Create all modals
+    Object.keys(workflowsData).forEach(id => {
+        const workflow = workflowsData[id];
+        const modal = createModal(id, workflow);
+        modalContainer.innerHTML += modal;
+    });
+    
+    // Close modal handlers
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+            closeAllModals();
+        }
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAllModals();
+    });
+    
+    console.log('✅ Workflow modals initialized successfully');
+}
+
+function createModal(id, data) {
+    return `
+        <div class="modal" id="modal-${id}">
+            <div class="modal-content">
+                <div class="modal-close" onclick="closeModal(${id})">×</div>
+                
+                <div class="modal-header">
+                    <div class="modal-icon" style="background: ${data.gradient}">
+                        ${data.icon}
+                    </div>
+                    <div>
+                        <h2 class="modal-title">${data.title}</h2>
+                    </div>
+                </div>
+                
+                <p class="modal-description" style="font-size: 1.15rem; line-height: 1.9;">${data.description}</p>
+                
+                <div class="modal-section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1)); padding: 1.5rem; border-radius: 16px; margin: 2rem 0;">
+                    <h3 class="modal-section-title" style="font-size: 1.4rem; margin-bottom: 1rem;">💎 Why This Changes Everything</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary); font-weight: 500;">${data.marketingPitch}</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">✨ What You Get</h3>
+                    <ul class="modal-list">
+                        ${data.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">🌟 Real Results from Real Businesses</h3>
+                    <ul class="modal-list">
+                        ${data.realWorldImpact.map(u => `<li>${u}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">📊 Measurable Impact on Your Bottom Line</h3>
+                    <ul class="modal-list">
+                        ${data.benefits.map(b => `<li>${b}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">💰 Investment & Returns</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🇪🇬</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Egypt Market</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">${data.pricing.egypt}</div>
+                        </div>
+                        <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🇸🇦🇦🇪</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Gulf Market</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--secondary-color);">${data.pricing.gulf}</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-secondary); text-align: center; font-style: italic;">
+                        ✅ Includes complete development, integration, testing, training, and 3-6 months premium support
+                    </p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.15)); padding: 2rem; border-radius: 20px; margin-top: 2rem; text-align: center; border: 2px solid var(--glass-border);">
+                    <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        🚀 Ready to Transform Your Business?
+                    </h3>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.8;">
+                        Stop wondering "what if" and start experiencing real results. Every day you wait is a day your competitors get ahead. 
+                        <strong style="color: var(--text-primary);">Let's talk about making this your reality.</strong>
+                    </p>
+                    <a href="https://wa.me/201113903070?text=I'm interested in ${encodeURIComponent(data.title)} - Let's discuss how it can transform my business!" 
+                       target="_blank" 
+                       class="btn btn-primary btn-large" 
+                       style="font-size: 1.2rem; padding: 1.2rem 3rem; box-shadow: 0 8px 30px rgba(236, 72, 153, 0.4);">
+                        <span>💬 Start Your Transformation Today</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        ⚡ Free consultation • Fast implementation • Proven results
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function openWorkflowModal(id) {
+    console.log('Opening modal:', id);
+    const modal = document.getElementById(`modal-${id}`);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    } else {
+        console.error('Modal not found:', id);
+    }
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(`modal-${id}`);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function closeAllModals() {
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+
+// === Make functions global ===
+window.openWorkflowModal = openWorkflowModal;
+window.closeModal = closeModal;
+
+console.log('🚀 AI Workflow Automation Hub - Initialized Successfully');
+
+         </script>
+</body>
+</html>
