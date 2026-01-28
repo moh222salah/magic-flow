@@ -11,12 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style> 
-        
-        
-      
-        {
+
+<style> 
+
+/* ========================================
+   AI Workflow Automation Hub - Styles
+   Modern Glassmorphism Design with Advanced Animations
+   ======================================== */
+
+/* === Reset & Base === */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -546,6 +550,7 @@ body {
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .workflow-card::after {
@@ -1016,6 +1021,117 @@ body {
     }
 }
 
+/* Typewriter Animation */
+.typewriter {
+    border-right: 3px solid var(--primary-color);
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+    min-height: 1.2em;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 49% { border-color: var(--primary-color); }
+    50%, 100% { border-color: transparent; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Hero Stats Showcase */
+.hero-stats-showcase {
+    margin: var(--spacing-md) auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: var(--spacing-md);
+    min-width: 200px;
+    text-align: center;
+    transition: all var(--transition-normal);
+    animation: scaleIn 0.5s ease-out;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--primary-color);
+}
+
+.stat-icon-hero {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-xs);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.stat-value-hero {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: var(--spacing-xs) 0;
+}
+
+.stat-label-hero {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Workflow Card Enhanced Animations */
+.workflow-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.workflow-title {
+    background: linear-gradient(90deg, 
+        var(--text-primary) 0%, 
+        var(--primary-color) 50%, 
+        var(--secondary-color) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 3s linear infinite;
+}
+
+@keyframes shimmerText {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
 .fade-in {
     animation: fadeIn 0.8s ease-out;
 }
@@ -1116,14 +1232,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
 }
-  
-        
-        
-        </style>
-        
-   
-    
-    
+
+
+    </style> 
+
+
+
 </head>
 <body>
     <!-- Animated Background Particles -->
@@ -1164,23 +1278,33 @@ body {
             <div class="hero-content fade-in">
                 <div class="hero-badge">
                     <span class="badge-icon">🚀</span>
-                    <span>Powered by AI & Machine Learning</span>
+                    <span id="dynamicBadge">Powered by AI & Machine Learning</span>
                 </div>
                 <h1 class="hero-title">
                     <span class="gradient-text">Transform Your Business</span>
-                    <br>with Intelligent Automation
+                    <br>with <span id="typewriterText" class="typewriter"></span>
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" id="dynamicDescription">
                     Discover the top 10 most demanded workflow automation solutions that save time, 
                     eliminate errors, and boost productivity by up to 85%. Built with cutting-edge AI technology.
                 </p>
+                
+                <!-- Dynamic Stats Showcase -->
+                <div class="hero-stats-showcase">
+                    <div class="stat-item">
+                        <div class="stat-icon-hero" id="dynamicStatIcon">⚡</div>
+                        <div class="stat-value-hero" id="dynamicStatValue">85%</div>
+                        <div class="stat-label-hero" id="dynamicStatLabel">Time Saved</div>
+                    </div>
+                </div>
+                
                 <div class="hero-buttons">
                     <a href="#workflows" class="btn btn-primary">
                         <span>Explore Workflows</span>
                         <span class="btn-icon">→</span>
                     </a>
                     <a href="#contact" class="btn btn-secondary">
-                        <span>Get Started</span>
+                        <span>Start Saving Now</span>
                     </a>
                 </div>
             </div>
@@ -1255,7 +1379,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(1)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1283,7 +1407,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(2)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1311,7 +1435,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(3)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1339,7 +1463,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(4)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1367,7 +1491,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(5)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1395,7 +1519,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(6)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1423,7 +1547,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(7)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1451,7 +1575,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(8)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1479,7 +1603,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(9)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1507,7 +1631,7 @@ body {
                         </div>
                     </div>
                     <button class="workflow-btn" onclick="openWorkflowModal(10)">
-                        <span>Learn More</span>
+                        <span>Show More</span>
                         <span class="btn-arrow">→</span>
                     </button>
                 </div>
@@ -1633,7 +1757,6 @@ body {
         </div>
     </section>
 
-    
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="container">
@@ -1708,7 +1831,7 @@ body {
                         <ul class="footer-list">
                             <li><a href="https://moh222salah.github.io/cv" target="_blank">Portfolio</a></li>
                             <li><a href="https://wa.me/201113903070" target="_blank">WhatsApp</a></li>
-                            <li><a href="mailto:contact@aiworkflowhub.com">Email</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#65060a0b1104061125040c120a170e03090a120d10074b060a08">Email</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1718,6 +1841,7 @@ body {
                 <p class="footer-credit">
                     Built with ❤️ and ⚡ by 
                     <a href="https://moh222salah.github.io/cv" target="_blank">Mohamed Salah</a>
+                  <a href="https://moh222salah.github.io/cv" target="_blank">Mohamed Salah</a>
                 </p>
             </div>
         </div>
@@ -1742,7 +1866,144 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initSmoothScroll();
     initWorkflowModals();
+    initDynamicHero();
+    initWorkflowAnimations();
 });
+
+// === Dynamic Hero Content ===
+function initDynamicHero() {
+    const typewriterPhrases = [
+        "Intelligent Automation",
+        "AI-Powered Workflows",
+        "Smart Business Solutions",
+        "Automated Excellence",
+        "Digital Transformation",
+        "Workflow Optimization"
+    ];
+    
+    const heroStats = [
+        { icon: "⚡", value: "85%", label: "Time Saved" },
+        { icon: "🚀", value: "95%", label: "Success Rate" },
+        { icon: "💰", value: "70%", label: "Cost Reduction" },
+        { icon: "📈", value: "300%", label: "ROI Increase" },
+        { icon: "✅", value: "99.9%", label: "Accuracy" },
+        { icon: "🎯", value: "500+", label: "Projects Automated" }
+    ];
+    
+    const descriptions = [
+        "Discover the top 10 most demanded workflow automation solutions that save time, eliminate errors, and boost productivity by up to 85%.",
+        "Transform your business operations with AI-powered automation that works 24/7, never takes a break, and delivers consistent results.",
+        "Join 500+ successful businesses that automated their workflows and achieved extraordinary growth with our proven solutions.",
+        "Stop wasting time on repetitive tasks. Let intelligent automation handle the boring work while you focus on growth.",
+        "Experience the future of business operations with workflows that learn, adapt, and improve automatically over time."
+    ];
+    
+    let currentPhraseIndex = 0;
+    let currentStatIndex = 0;
+    let currentDescIndex = 0;
+    
+    // Typewriter Effect
+    function typeWriter(text, element, speed = 100) {
+        element.textContent = '';
+        let i = 0;
+        
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        
+        type();
+    }
+    
+    // Initialize first phrase
+    const typewriterElement = document.getElementById('typewriterText');
+    if (typewriterElement) {
+        typeWriter(typewriterPhrases[0], typewriterElement, 80);
+        
+        // Rotate phrases
+        setInterval(() => {
+            currentPhraseIndex = (currentPhraseIndex + 1) % typewriterPhrases.length;
+            typeWriter(typewriterPhrases[currentPhraseIndex], typewriterElement, 80);
+        }, 4000);
+    }
+    
+    // Rotate hero stats
+    const statIcon = document.getElementById('dynamicStatIcon');
+    const statValue = document.getElementById('dynamicStatValue');
+    const statLabel = document.getElementById('dynamicStatLabel');
+    
+    if (statIcon && statValue && statLabel) {
+        setInterval(() => {
+            currentStatIndex = (currentStatIndex + 1) % heroStats.length;
+            const stat = heroStats[currentStatIndex];
+            
+            // Fade out
+            statIcon.style.opacity = '0';
+            statValue.style.opacity = '0';
+            statLabel.style.opacity = '0';
+            
+            setTimeout(() => {
+                statIcon.textContent = stat.icon;
+                statValue.textContent = stat.value;
+                statLabel.textContent = stat.label;
+                
+                // Fade in
+                statIcon.style.transition = 'opacity 0.5s ease';
+                statValue.style.transition = 'opacity 0.5s ease';
+                statLabel.style.transition = 'opacity 0.5s ease';
+                statIcon.style.opacity = '1';
+                statValue.style.opacity = '1';
+                statLabel.style.opacity = '1';
+            }, 300);
+        }, 3000);
+    }
+    
+    // Rotate descriptions
+    const descElement = document.getElementById('dynamicDescription');
+    if (descElement) {
+        setInterval(() => {
+            currentDescIndex = (currentDescIndex + 1) % descriptions.length;
+            descElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                descElement.textContent = descriptions[currentDescIndex];
+                descElement.style.transition = 'opacity 0.8s ease';
+                descElement.style.opacity = '1';
+            }, 400);
+        }, 8000);
+    }
+}
+
+// === Workflow Card Animations ===
+function initWorkflowAnimations() {
+    const workflowCards = document.querySelectorAll('.workflow-card');
+    
+    workflowCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        
+        // Add magnetic effect on hover
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const deltaX = (x - centerX) / centerX;
+            const deltaY = (y - centerY) / centerY;
+            
+            card.style.transform = `perspective(1000px) rotateY(${deltaX * 5}deg) rotateX(${-deltaY * 5}deg) translateY(-8px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
 
 // === Particle System ===
 function initParticles() {
@@ -1919,42 +2180,323 @@ const workflowsData = {
         title: "Lead Qualification & Distribution",
         icon: "🎯",
         gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        description: "Transform your sales process with AI-powered lead scoring and intelligent distribution. Our system analyzes incoming leads in real-time, scores them based on multiple criteria, and automatically routes them to the most suitable sales representatives.",
+        description: "Imagine never losing a potential customer again. Your leads are automatically analyzed, scored, and delivered to the perfect salesperson - all in under 5 minutes. While your competitors are still manually sorting through spreadsheets, you're already closing deals.",
+        marketingPitch: "⚡ Stop Watching Money Slip Away! Every minute a lead waits is money lost. Your competitors respond in hours - you'll respond in minutes. Transform your sales team into a high-performance machine that never sleeps, never forgets, and never lets a hot lead go cold.",
         features: [
-            "AI-powered lead scoring with 0-100 scale based on company size, budget, and urgency",
-            "Smart distribution algorithm balancing workload and expertise across sales team",
-            "Real-time notifications via Slack, Email, and SMS for instant follow-up",
-            "CRM integration with Salesforce, HubSpot, Pipedrive, and Zoho",
-            "Data enrichment from LinkedIn, Clearbit, and other sources",
-            "Automatic lead tracking and conversion analytics"
+            "Lightning-Fast Response: Your team contacts leads within 5 minutes, not 4 hours",
+            "Smart Matching: Every lead goes to the salesperson most likely to close the deal",
+            "Zero Manual Work: No more spreadsheets, no more guessing, no more lost opportunities",
+            "Fair Distribution: Your team gets balanced workloads based on performance and capacity",
+            "Instant Notifications: Get alerts via Slack, Email, or SMS the second a hot lead arrives",
+            "Rich Data: Every lead comes with company info, social profiles, and buying signals"
         ],
-        workflow: [
-            "Lead captured from website form, chatbot, or manual entry",
-            "AI analyzes lead data and assigns quality score (0-100)",
-            "System determines best sales rep based on expertise and availability",
-            "Lead automatically added to CRM with enriched data",
-            "Instant notification sent to assigned representative",
-            "Automated follow-up reminders and progress tracking"
+        realWorldImpact: [
+            "A software company increased sales by 45% in 90 days - same team, same budget",
+            "Real estate agency closed 3 extra deals per month worth $180,000 in commissions",
+            "Insurance broker reduced response time from 6 hours to 3 minutes - conversion rate doubled",
+            "Marketing agency eliminated lead assignment conflicts that cost them $50k annually"
         ],
-        useCases: [
-            "B2B SaaS companies managing high volume of inbound leads",
-            "Real estate agencies distributing property inquiries",
-            "Insurance companies routing quote requests",
-            "Marketing agencies qualifying potential clients"
-        ],
-        technologies: ["n8n", "OpenAI GPT-4", "Salesforce API", "HubSpot", "Slack API", "PostgreSQL"],
         benefits: [
-            "85% faster response time (from 4 hours to 5 minutes)",
-            "45% increase in conversion rates",
-            "15 hours saved weekly per sales team",
-            "80% more balanced workload distribution",
-            "Zero leads lost due to manual errors"
+            "45% higher conversion rates - more deals closed from the same number of leads",
+            "85% faster response time - be first to contact while others are still checking email",
+            "15 hours saved weekly - your sales team focuses on selling, not admin work",
+            "Zero leads lost - every single inquiry gets immediate attention and follow-up",
+            "Complete transparency - track every lead from entry to close with full analytics"
         ],
         pricing: {
             egypt: "EGP 45,000 - 65,000",
             gulf: "$12,000 - $17,000"
         }
     },
+    2: {
+        title: "AI Document Processing & Analysis",
+        icon: "📄",
+        gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+        description: "Your team spends hours typing data from documents into systems. Imagine if that work happened instantly, perfectly, 24/7. Our AI reads invoices, contracts, forms - anything with text - and extracts every detail with 99.9% accuracy. What took a day now takes 30 seconds.",
+        marketingPitch: "💸 Stop Burning Money on Manual Data Entry! Your employees are too valuable to spend their days typing. One person doing data entry costs you $30,000+ yearly. Our AI processes 1,000 documents in the time it takes to drink your coffee - with zero errors and zero fatigue.",
+        features: [
+            "Instant Processing: 1,000 documents processed in minutes, not days or weeks",
+            "Perfect Accuracy: 99.9% accuracy means no costly mistakes or rework",
+            "Smart Understanding: Recognizes invoices, contracts, receipts, forms automatically",
+            "Any Language: Works with 50+ languages including handwritten text",
+            "Automatic Filing: Documents sorted and stored exactly where they belong",
+            "Seamless Integration: Feeds directly into your accounting, CRM, or ERP systems"
+        ],
+        realWorldImpact: [
+            "Accounting firm eliminated 3 full-time data entry positions - saving $120,000 annually",
+            "Law office processes 500 contracts monthly instead of 50 - 10x capacity increase",
+            "Healthcare clinic digitized 10 years of patient records in just 2 weeks",
+            "Government agency reduced application processing time from 30 days to 4 hours"
+        ],
+        benefits: [
+            "90% faster processing - finish in hours what used to take weeks",
+            "95% cost reduction - stop paying humans to do robot work",
+            "Zero errors - eliminate the typos, missed fields, and costly mistakes",
+            "24/7 operation - documents processed any time, day or night",
+            "Scale infinitely - handle 10x more documents without hiring anyone"
+        ],
+        pricing: {
+            egypt: "EGP 55,000 - 75,000",
+            gulf: "$14,500 - $19,500"
+        }
+    },
+    3: {
+        title: "Decision Logic & Smart Routing",
+        icon: "🧠",
+        gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+        description: "Stop relying on humans to make routing decisions that should be instant and perfect. Our AI analyzes every request, applies complex business rules in milliseconds, and routes it to exactly the right person or system. What used to cause confusion and delays now happens automatically and flawlessly.",
+        marketingPitch: "🎯 End the Chaos of Misdirected Work! Every misdirected ticket, misrouted order, or wrong assignment costs you time, money, and customer satisfaction. While others play email ping-pong, your system makes perfect decisions instantly. Your customers get help faster, your team works smarter, and your business runs like clockwork.",
+        features: [
+            "Instant Decisions: Complex routing that takes humans minutes happens in milliseconds",
+            "Zero Mistakes: AI never forgets a rule, never plays favorites, never makes errors",
+            "Smart Learning: Gets better over time by learning from outcomes",
+            "Perfect Balance: Distributes work evenly based on capacity and skill",
+            "Automatic Escalation: Critical issues get immediate priority attention",
+            "Complete Visibility: See exactly why every decision was made"
+        ],
+        realWorldImpact: [
+            "IT helpdesk cut ticket resolution time by 60% - users get help 3x faster",
+            "Customer service team achieved 94% first-contact resolution - up from 52%",
+            "Operations team eliminated 85% of routing errors that caused delays",
+            "Financial services company processes loan applications 5x faster"
+        ],
+        benefits: [
+            "95% fewer routing errors - work goes to the right person first time, every time",
+            "60% faster response - eliminate the back-and-forth of wrong assignments",
+            "Zero favoritism - fair, logical distribution based on data, not politics",
+            "Automatic priority - urgent work gets immediate attention without human judgment",
+            "Real-time insights - understand your workflow patterns and optimize continuously"
+        ],
+        pricing: {
+            egypt: "EGP 50,000 - 70,000",
+            gulf: "$13,000 - $18,500"
+        }
+    },
+    4: {
+        title: "Real-time Notifications System",
+        icon: "🔔",
+        gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+        description: "Critical information shouldn't wait in email inboxes. When something important happens, everyone who needs to know finds out instantly - through their preferred channel, at the right time, with the right priority. SMS for emergencies, Email for details, Slack for team updates. All automatic, all instant, all reliable.",
+        marketingPitch: "⚡ Never Miss a Critical Moment Again! That emergency that took 4 hours to communicate? Now it takes 4 seconds. That important update buried in 200 emails? Now it's an instant SMS. Stop losing money because information moved too slowly. In business, seconds matter - and we deliver in milliseconds.",
+        features: [
+            "Multi-Channel: Email, SMS, Slack, Teams, WhatsApp - use what your people actually check",
+            "Smart Timing: Respects time zones, work hours, and personal preferences automatically",
+            "Priority Routing: Emergencies via SMS, updates via email, FYIs via Slack",
+            "Perfect Delivery: 99.9% delivery success with automatic retries",
+            "Rich Content: Send links, images, data, actions - not just text",
+            "Track Everything: Know exactly who received, read, and acted on each message"
+        ],
+        realWorldImpact: [
+            "E-commerce store reduced cart abandonment by 35% with instant order updates",
+            "Bank stopped $2M in fraud by alerting customers within seconds of suspicious activity",
+            "Hospital reduced patient no-shows by 60% with timely appointment reminders",
+            "Tech company decreased incident response time from 30 minutes to 30 seconds"
+        ],
+        benefits: [
+            "99.9% delivery rate - your critical messages always get through",
+            "Sub-second speed - information reaches people faster than email can load",
+            "Zero missed alerts - automatic fallback if first channel fails",
+            "Perfect timing - messages arrive when people can actually act on them",
+            "Complete tracking - prove compliance, measure engagement, optimize delivery"
+        ],
+        pricing: {
+            egypt: "EGP 42,000 - 60,000",
+            gulf: "$11,000 - $15,500"
+        }
+    },
+    5: {
+        title: "Invoice Processing & Payment Collection",
+        icon: "💰",
+        gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
+        description: "Your money is sitting in unpaid invoices while your team manually creates, sends, and chases payments. Stop the madness. Invoices create themselves, send themselves, track themselves, and even send polite reminders automatically. You just watch the payments roll in faster than ever before.",
+        marketingPitch: "💸 Stop Leaving Money on the Table! Every day an invoice sits unpaid is money you're lending interest-free. Businesses lose millions because invoices arrive late, reminders get forgotten, and payments slip through cracks. While you're manually creating invoices, your competitors' money is already in the bank. Get paid faster. Get paid more. Get paid automatically.",
+        features: [
+            "Instant Creation: Invoices generate automatically when work completes",
+            "Smart Delivery: Sent via email with easy online payment links included",
+            "Automatic Reminders: Polite nudges before and after due dates without lifting a finger",
+            "Real-Time Tracking: See instantly when invoices are sent, viewed, and paid",
+            "Multiple Currencies: Handle international clients with automatic conversions",
+            "Perfect Records: Every transaction syncs to your accounting system automatically"
+        ],
+        realWorldImpact: [
+            "Consulting firm cut payment collection time from 60 days to 22 days - massive cash flow improvement",
+            "SaaS company reduced manual invoicing time from 20 hours monthly to zero",
+            "Freelancer increased on-time payments from 40% to 85% - less chasing, more earning",
+            "Service business eliminated $80,000 in forgotten/lost invoices annually"
+        ],
+        benefits: [
+            "85% faster processing - invoices out the door in minutes, not days",
+            "40% faster collection - get paid weeks earlier with smart reminders",
+            "Zero human errors - no more wrong amounts, missing line items, or lost invoices",
+            "35% better cash flow - money arrives predictably and faster",
+            "100% accuracy - accounting records always match reality perfectly"
+        ],
+        pricing: {
+            egypt: "EGP 55,000 - 75,000",
+            gulf: "$14,500 - $19,500"
+        }
+    },
+    6: {
+        title: "Customer Support Ticket Routing",
+        icon: "🎧",
+        gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+        description: "Support tickets pile up, customers wait, and your team plays hot potato with complex issues. End the chaos. Our AI reads every ticket, understands the problem, determines priority, and routes it to the perfect expert - all before a human even sees it. Fast support makes happy customers who spend more and stay longer.",
+        marketingPitch: "🚨 Your Support Chaos Is Costing You Customers! Every minute a customer waits, your competitor gets closer to stealing them. Every misdirected ticket costs you credibility. Every urgent issue buried in a queue costs you money. Stop letting support chaos drive customers away. Great support isn't expensive - losing customers is.",
+        features: [
+            "Instant Classification: AI reads tickets and knows exactly what they need",
+            "Smart Prioritization: Urgent issues jump the queue automatically",
+            "Expert Matching: Every ticket goes to the person best equipped to solve it",
+            "SLA Protection: Automatic escalation ensures nothing gets forgotten",
+            "Sentiment Analysis: Angry customers get immediate attention from senior staff",
+            "Complete History: Full context so agents never ask customers to repeat themselves"
+        ],
+        realWorldImpact: [
+            "SaaS company cut average resolution time from 24 hours to 9 hours - customers love them",
+            "E-commerce store reduced support costs by 40% while satisfaction scores increased",
+            "B2B platform achieved 94% customer satisfaction - up from 72% in 3 months",
+            "Tech startup handled 5x more tickets with same team size during rapid growth"
+        ],
+        benefits: [
+            "60% faster resolution - problems solved in hours, not days",
+            "94% satisfaction scores - happy customers who become promoters",
+            "75% fewer routing errors - right expert, first time, every time",
+            "50% more productive agents - working on right issues, not wrong ones",
+            "Zero SLA breaches - automatic tracking and escalation prevents disasters"
+        ],
+        pricing: {
+            egypt: "EGP 50,000 - 70,000",
+            gulf: "$13,000 - $18,500"
+        }
+    },
+    7: {
+        title: "Social Media Management Automation",
+        icon: "📱",
+        gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+        description: "Stop scrambling for content at the last minute. Stop forgetting to post. Stop manually copying posts across platforms. Schedule weeks of content in one sitting, post automatically at perfect times, track what works, and maintain consistent presence without daily stress. Your brand stays visible while you focus on business.",
+        marketingPitch: "📱 Inconsistent Posting Is Killing Your Brand! Your competitors post daily. You post when you remember. They're building audiences. You're losing visibility. Every missed post is a missed sale. Stop treating social media like a chore and start treating it like the money-making machine it is. Consistent presence = consistent revenue.",
+        features: [
+            "Multi-Platform Power: Post once, publish everywhere - Facebook, Instagram, LinkedIn, Twitter",
+            "Perfect Timing: AI determines when YOUR audience is most active and engaged",
+            "Content Calendar: See weeks ahead, never scramble for last-minute posts",
+            "Smart Reposting: Successful content gets automatically reshared at optimal times",
+            "Unified Analytics: All your social metrics in one beautiful dashboard",
+            "Engagement Tracking: Know exactly what content drives results"
+        ],
+        realWorldImpact: [
+            "Marketing agency manages 50 client accounts with 2 people instead of 8",
+            "Local business 3x'd their followers in 6 months with consistent posting",
+            "E-commerce brand increased social-driven sales by 280% with better timing",
+            "Influencer saved 20 hours weekly while doubling posting frequency"
+        ],
+        benefits: [
+            "20 hours saved weekly - stop wasting time on copy-paste across platforms",
+            "300% more consistent - never miss a post, never scramble for content",
+            "65% higher engagement - post when your audience is actually online",
+            "40% faster growth - consistency builds audiences faster than sporadic brilliance",
+            "Complete control - manage everything from one simple dashboard"
+        ],
+        pricing: {
+            egypt: "EGP 40,000 - 55,000",
+            gulf: "$10,500 - $14,500"
+        }
+    },
+    8: {
+        title: "Email Marketing Automation & Personalization",
+        icon: "✉️",
+        gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+        description: "Generic mass emails get ignored and deleted. Personal, relevant messages get opened and clicked. Our AI creates unique emails for each subscriber based on their behavior, interests, and stage in your funnel. It's like having a genius marketer write individual emails to every single person on your list - automatically.",
+        marketingPitch: "💰 Generic Emails Are Flushing Money Down the Drain! Your subscribers ignore 82% of your emails. Why? Because they're not relevant. While you blast the same message to everyone, your competitors send perfectly timed, personally relevant emails that get 3x better results. Stop treating your email list like a broadcast tower. Start treating it like a gold mine.",
+        features: [
+            "Deep Personalization: Every email customized based on behavior, purchases, and engagement",
+            "Smart Segmentation: Automatic grouping by interests, activity, and buying stage",
+            "Perfect Timing: AI sends when each individual subscriber is most likely to engage",
+            "Automatic Testing: System tests subject lines, content, and timing to optimize results",
+            "Behavior Triggers: Emails send automatically based on actions (or inactions)",
+            "Predictive Analytics: Know who's about to buy, who's losing interest, who needs attention"
+        ],
+        realWorldImpact: [
+            "E-commerce store increased email revenue by 125% with better personalization",
+            "SaaS company cut trial-to-paid conversion time from 30 days to 12 days",
+            "Publisher doubled click rates and tripled revenue per subscriber",
+            "B2B company generated $2.3M in pipeline from automated nurture campaigns"
+        ],
+        benefits: [
+            "42% open rates - people actually read your emails instead of deleting them",
+            "8.7% click rates - subscribers engage because content is relevant to them",
+            "125% revenue increase - better emails = more sales, it's that simple",
+            "60% lower unsubscribe rate - people love emails that help them",
+            "Zero manual work - the system runs 24/7 while you sleep"
+        ],
+        pricing: {
+            egypt: "EGP 48,000 - 68,000",
+            gulf: "$12,500 - $17,500"
+        }
+    },
+    9: {
+        title: "Financial Reconciliation Automation",
+        icon: "💳",
+        gradient: "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)",
+        description: "Your accounting team spends days matching thousands of transactions across systems. The work is tedious, error-prone, and steals time from strategic thinking. Our system matches everything automatically, flags discrepancies instantly, and generates perfect reconciliation reports in minutes. Your CFO will wonder why they waited so long.",
+        marketingPitch: "🚨 Reconciliation Delays Are Financial Time Bombs! Every day you wait to reconcile is another day errors hide and grow. That missing $500 becomes $50,000. That small discrepancy becomes a compliance disaster. While your team drowns in spreadsheets, our AI reconciles in 30 minutes what takes them 5 days. Fast reconciliation = fast decision-making = competitive advantage.",
+        features: [
+            "Automatic Matching: Connects transactions across banks, payment systems, and accounting software",
+            "Intelligent Recognition: Matches even when amounts, dates, or descriptions don't match perfectly",
+            "Instant Alerts: Discrepancies flagged immediately, not discovered weeks later",
+            "Fraud Detection: Unusual patterns spotted automatically before they become disasters",
+            "Multi-Currency: Handles international transactions with automatic exchange rate calculations",
+            "Perfect Audit Trail: Every reconciliation documented for compliance and review"
+        ],
+        realWorldImpact: [
+            "Retail chain cut month-end close from 5 days to 30 minutes - decisions made faster",
+            "Multi-location restaurant eliminated $200,000 annual loss from undetected discrepancies",
+            "E-commerce business caught payment processor error that would have cost $85,000",
+            "Financial services firm passed audit with zero findings - first time in company history"
+        ],
+        benefits: [
+            "90% time savings - 5 days of work done in 30 minutes",
+            "99.9% accuracy - computer precision vs human errors",
+            "Immediate fraud detection - catch problems before they cost serious money",
+            "80 hours saved monthly - your team does strategy instead of data entry",
+            "Real-time visibility - know your true financial position any time"
+        ],
+        pricing: {
+            egypt: "EGP 65,000 - 90,000",
+            gulf: "$17,000 - $23,500"
+        }
+    },
+    10: {
+        title: "HR Onboarding Automation",
+        icon: "👥",
+        gradient: "linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%)",
+        description: "New hires waste their first week filling forms while your HR team plays email tag with IT for account setup. Meanwhile, the new employee wonders if they made a mistake joining you. End the chaos. From offer acceptance to first productive day takes 72 hours instead of 3 weeks. Happy employees start contributing immediately.",
+        marketingPitch: "⏰ Bad Onboarding Costs You Top Talent! 20% of new hires quit within 45 days - many because onboarding was a disaster. Every delayed setup day is a day they're not producing. Every forgotten task is a credibility hit. While competitors take weeks to onboard, you'll have new hires productive in days. First impressions matter - make yours flawless.",
+        features: [
+            "Instant Documentation: New hires sign all documents electronically from anywhere",
+            "Automatic Provisioning: Email, systems, tools - everything ready on day one",
+            "Smart Task Management: Every stakeholder knows exactly what to do and when",
+            "Equipment Automation: Laptop, phone, access badges ordered without manual requests",
+            "Training Assignment: Right courses scheduled based on role and experience",
+            "Compliance Guarantee: Every legal requirement tracked and completed perfectly"
+        ],
+        realWorldImpact: [
+            "Tech startup reduced onboarding time from 3 weeks to 3 days - new hires productive faster",
+            "Healthcare facility ensured 100% compliance - passed audit with zero findings",
+            "Retail company onboarded 200 seasonal employees in 2 days instead of 3 weeks",
+            "Remote company onboards global employees without timezone coordination chaos"
+        ],
+        benefits: [
+            "70% faster onboarding - 3 days instead of 3 weeks to full productivity",
+            "50% higher satisfaction - new hires feel welcomed and prepared, not confused",
+            "100% compliance - never miss a form, never risk legal issues",
+            "70% less HR time - stop playing email tag, let automation orchestrate",
+            "Zero forgotten tasks - every step tracked, nothing falls through cracks"
+        ],
+        pricing: {
+            egypt: "EGP 52,000 - 72,000",
+            gulf: "$13,500 - $18,500"
+        }
+    }
+};
     2: {
         title: "AI Document Processing & Analysis",
         icon: "📄",
@@ -2355,49 +2897,36 @@ function createModal(id, data) {
                     </div>
                 </div>
                 
-                <p class="modal-description">${data.description}</p>
+                <p class="modal-description" style="font-size: 1.15rem; line-height: 1.9;">${data.description}</p>
+                
+                <div class="modal-section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1)); padding: 1.5rem; border-radius: 16px; margin: 2rem 0;">
+                    <h3 class="modal-section-title" style="font-size: 1.4rem; margin-bottom: 1rem;">💎 Why This Changes Everything</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary); font-weight: 500;">${data.marketingPitch}</p>
+                </div>
                 
                 <div class="modal-section">
-                    <h3 class="modal-section-title">🎯 Key Features</h3>
+                    <h3 class="modal-section-title">✨ What You Get</h3>
                     <ul class="modal-list">
                         ${data.features.map(f => `<li>${f}</li>`).join('')}
                     </ul>
                 </div>
                 
                 <div class="modal-section">
-                    <h3 class="modal-section-title">⚙️ How It Works</h3>
+                    <h3 class="modal-section-title">🌟 Real Results from Real Businesses</h3>
                     <ul class="modal-list">
-                        ${data.workflow.map((s, i) => `<li><strong>Step ${i + 1}:</strong> ${s}</li>`).join('')}
+                        ${data.realWorldImpact.map(u => `<li>${u}</li>`).join('')}
                     </ul>
                 </div>
                 
                 <div class="modal-section">
-                    <h3 class="modal-section-title">💼 Use Cases</h3>
-                    <ul class="modal-list">
-                        ${data.useCases.map(u => `<li>${u}</li>`).join('')}
-                    </ul>
-                </div>
-                
-                <div class="modal-section">
-                    <h3 class="modal-section-title">🔧 Technologies Used</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
-                        ${data.technologies.map(tech => `
-                            <span style="padding: 0.5rem 1rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; font-size: 0.9rem;">
-                                ${tech}
-                            </span>
-                        `).join('')}
-                    </div>
-                </div>
-                
-                <div class="modal-section">
-                    <h3 class="modal-section-title">📈 Measurable Benefits</h3>
+                    <h3 class="modal-section-title">📊 Measurable Impact on Your Bottom Line</h3>
                     <ul class="modal-list">
                         ${data.benefits.map(b => `<li>${b}</li>`).join('')}
                     </ul>
                 </div>
                 
                 <div class="modal-section">
-                    <h3 class="modal-section-title">💰 Pricing</h3>
+                    <h3 class="modal-section-title">💰 Investment & Returns</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
                         <div class="glass-card" style="padding: 1.5rem; text-align: center;">
                             <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🇪🇬</div>
@@ -2410,18 +2939,29 @@ function createModal(id, data) {
                             <div style="font-size: 1.5rem; font-weight: 700; color: var(--secondary-color);">${data.pricing.gulf}</div>
                         </div>
                     </div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary); text-align: center;">
-                        Includes development, integration, testing, training, and 3-6 months support
+                    <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-secondary); text-align: center; font-style: italic;">
+                        ✅ Includes complete development, integration, testing, training, and 3-6 months premium support
                     </p>
                 </div>
                 
-                <div style="margin-top: 2rem; text-align: center;">
-                    <a href="https://wa.me/201113903070?text=I'm interested in ${encodeURIComponent(data.title)}" 
+                <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.15)); padding: 2rem; border-radius: 20px; margin-top: 2rem; text-align: center; border: 2px solid var(--glass-border);">
+                    <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        🚀 Ready to Transform Your Business?
+                    </h3>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.8;">
+                        Stop wondering "what if" and start experiencing real results. Every day you wait is a day your competitors get ahead. 
+                        <strong style="color: var(--text-primary);">Let's talk about making this your reality.</strong>
+                    </p>
+                    <a href="https://wa.me/201113903070?text=I'm interested in ${encodeURIComponent(data.title)} - Let's discuss how it can transform my business!" 
                        target="_blank" 
-                       class="btn btn-primary btn-large">
-                        <span>Get Started Now</span>
+                       class="btn btn-primary btn-large" 
+                       style="font-size: 1.2rem; padding: 1.2rem 3rem; box-shadow: 0 8px 30px rgba(236, 72, 153, 0.4);">
+                        <span>💬 Start Your Transformation Today</span>
                         <span class="btn-icon">→</span>
                     </a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        ⚡ Free consultation • Fast implementation • Proven results
+                    </p>
                 </div>
             </div>
         </div>
@@ -2457,7 +2997,6 @@ window.closeModal = closeModal;
 
 console.log('🚀 AI Workflow Automation Hub - Initialized Successfully');
 
-      
-    </script>
+         </script>
 </body>
-  </html>
+</html>
